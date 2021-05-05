@@ -1,0 +1,101 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Langar", cursive;
+}
+
+html {
+  font-size: 62.5%;
+}
+.parent {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f8ff;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5rem;
+  font-style: bold;
+}
+
+.child {
+  width: 110rem;
+  height: 58rem;
+  border: 0.6rem solid #00bfff;
+  border-bottom-width: 3.2rem;
+  box-shadow: 1rem 2rem 2.2rem rgba(0, 0, 0, 0.4),
+    1rem 1rem 2.2rem rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+}
+
+.child span {
+  height: 71%;
+  display: inline;
+  border: 0.2rem solid #b0c4de;
+  color: black;
+  margin: 0 2.5rem;
+  margin-top: 0px;
+  position: relative;
+  transform-origin: top;
+  box-shadow: 0rem 0.3rem 0.2rem rgba(0, 0, 0, 0.5);
+}
+
+.child span::before {
+  content: "";
+  width: 5.2rem;
+  height: 5.2rem;
+  background-color: #b0c4de;
+  border-radius: 5.1rem;
+  position: absolute;
+  transform: translate(-50%, 10%);
+  bottom: 0%;
+  box-shadow: 0rem 0.4rem 0.6rem rgba(0, 0, 0, 0.6);
+}
+
+.child span:first-child {
+  animation: graddle 2s linear infinite;
+}
+
+@keyframes graddle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(50deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.child span:last-child {
+  animation: graddler 2s linear 1s infinite;
+}
+
+@keyframes graddler {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(-50deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
